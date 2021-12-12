@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS `case-study` CHARACTER SET utf COLLATE utf8_unicode_ci;
