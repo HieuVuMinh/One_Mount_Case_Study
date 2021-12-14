@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 @Table(name = "OWNERS")
 public class OwnersSql extends BaseModel {
-    private long id;
+    private String id;
     private String name;
     private String email;
     private String phoneNumber;
@@ -27,12 +27,12 @@ public class OwnersSql extends BaseModel {
     }
 
     @Id
-    @Column(name = "id", nullable = false)
-    public long getId() {
+    @Column(name = "owner_id", nullable = false)
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

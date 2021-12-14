@@ -20,10 +20,8 @@ public class SectorsSql extends BaseModel {
 
     private List<PropertiesSql> properties;
 
-
-
     @ManyToOne
-    @JoinColumn(name = "project_id", referencedColumnName = "id")
+    @JoinColumn(name = "project_id", referencedColumnName = "project_id")
     public ProjectSql getProject() {
         return project;
     }
@@ -34,7 +32,7 @@ public class SectorsSql extends BaseModel {
     }
 
     @Id
-    @Column(name = "id", nullable = false, length = 200)
+    @Column(name = "sector_id", nullable = false, length = 200)
     public String getId() {
         return id;
     }

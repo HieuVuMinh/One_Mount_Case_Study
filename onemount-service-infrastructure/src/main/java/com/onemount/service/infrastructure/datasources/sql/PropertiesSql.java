@@ -31,28 +31,28 @@ public class PropertiesSql extends BaseModel {
 
     private ProjectSql project;
 
-    private PropertyAddressesSql address;
+    private PropertyAddressSql propertyAddress;
 
     private List<PropertyGalleriesSql> propertyGalleries;
 
     private List<OwnersSql> owners;
 
     @ManyToOne
-    @JoinColumn(name = "sector_id", referencedColumnName = "id")
+    @JoinColumn(name = "sector_id", referencedColumnName = "sector_id")
     public SectorsSql getSector() {
         return sector;
     }
 
     @ManyToOne
-    @JoinColumn(name = "project_id", referencedColumnName = "id")
+    @JoinColumn(name = "project_id", referencedColumnName = "project_id")
     public ProjectSql getProject() {
         return project;
     }
 
     @OneToOne
-    @JoinColumn(name = "address_id", referencedColumnName = "id")
-    public PropertyAddressesSql getAddress() {
-        return address;
+    @JoinColumn(name = "address_id", referencedColumnName = "address_id")
+    public PropertyAddressSql getPropertyAddress() {
+        return propertyAddress;
     }
 
     @OneToMany(mappedBy = "property")
@@ -66,7 +66,7 @@ public class PropertiesSql extends BaseModel {
     }
 
     @Id
-    @Column(name = "id", nullable = false, length = 200)
+    @Column(name = "property_id", nullable = false, length = 200)
     public String getPropertyId() {
         return propertyId;
     }
@@ -106,7 +106,7 @@ public class PropertiesSql extends BaseModel {
     }
 
     @Basic
-    @Column(name = "number_of_bedrooms", nullable = true, precision = 2)
+    @Column(name = "number_of_bedrooms", nullable = true)
     public BigDecimal getNumberOfBedrooms() {
         return numberOfBedrooms;
     }
@@ -116,7 +116,7 @@ public class PropertiesSql extends BaseModel {
     }
 
     @Basic
-    @Column(name = "number_of_bathrooms", nullable = true, precision = 2)
+    @Column(name = "number_of_bathrooms", nullable = true)
     public BigDecimal getNumberOfBathrooms() {
         return numberOfBathrooms;
     }
@@ -176,7 +176,7 @@ public class PropertiesSql extends BaseModel {
     }
 
     @Basic
-    @Column(name = "number_balcony", nullable = true, precision = 2)
+    @Column(name = "number_balcony", nullable = true)
     public BigDecimal getNumberBalcony() {
         return numberBalcony;
     }

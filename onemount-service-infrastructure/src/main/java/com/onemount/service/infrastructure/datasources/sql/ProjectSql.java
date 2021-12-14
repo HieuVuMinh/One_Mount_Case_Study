@@ -34,7 +34,7 @@ public class ProjectSql extends BaseModel {
     private List<SectorsSql> sectors;
 
     @OneToOne
-    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    @JoinColumn(name = "address_id", referencedColumnName = "address_id")
     public ProjectAddressSql getProjectAddress() {
         return projectAddress;
     }
@@ -55,7 +55,7 @@ public class ProjectSql extends BaseModel {
     }
 
     @Id
-    @Column(name = "id", nullable = false, length = 200)
+    @Column(name = "project_id", nullable = false, length = 200)
     public String getProjectId() {
         return projectId;
     }
@@ -85,7 +85,7 @@ public class ProjectSql extends BaseModel {
     }
 
     @Basic
-    @Column(name = "total_area", nullable = true, precision = 2)
+    @Column(name = "total_area", nullable = true)
     public BigDecimal getTotalArea() {
         return totalArea;
     }

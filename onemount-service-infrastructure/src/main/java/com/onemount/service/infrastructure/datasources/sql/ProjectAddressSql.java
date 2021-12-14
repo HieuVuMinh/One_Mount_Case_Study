@@ -10,26 +10,32 @@ import javax.persistence.*;
 @Table(name = "PROJECT_ADDRESS")
 public class ProjectAddressSql extends BaseModel {
 
-    private String id;
+
+    private String addressId;
     private String wardName;
     private String districtName;
     private String cityName;
-    private Number latitude;
-    private Number longitude;
+    private Integer latitude;
+    private Integer longitude;
+    private ProjectSql projectSql;
 
-
-    @Id
-    @Column(name = "id", nullable = false)
-    public String getId() {
-        return id;
+    @OneToOne(mappedBy = "projectAddress")
+    public ProjectSql getProjectSql() {
+        return projectSql;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    @Id
+    @Column(name = "address_id", nullable = false)
+    public String getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(String addressId) {
+        this.addressId = addressId;
     }
 
     @Basic
-    @Column(name = "ward", nullable = true, length = 100)
+    @Column(name = "ward_name", nullable = true, length = 100)
     public String getWardName() {
         return wardName;
     }
@@ -39,7 +45,7 @@ public class ProjectAddressSql extends BaseModel {
     }
 
     @Basic
-    @Column(name = "district", nullable = true, length = 200)
+    @Column(name = "district_name", nullable = true, length = 200)
     public String getDistrictName() {
         return districtName;
     }
@@ -59,22 +65,22 @@ public class ProjectAddressSql extends BaseModel {
     }
 
     @Basic
-    @Column(name = "latitude", nullable = true, precision = 10)
-    public Number getLatitude() {
+    @Column(name = "latitude", nullable = true)
+    public Integer getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Number latitude) {
+    public void setLatitude(Integer latitude) {
         this.latitude = latitude;
     }
 
     @Basic
-    @Column(name = "longitude", nullable = true, precision = 10)
-    public Number getLongitude() {
+    @Column(name = "longitude", nullable = true)
+    public Integer getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Number longitude) {
+    public void setLongitude(Integer longitude) {
         this.longitude = longitude;
     }
 }

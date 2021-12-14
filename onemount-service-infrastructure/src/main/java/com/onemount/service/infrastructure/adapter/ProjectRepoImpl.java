@@ -2,6 +2,7 @@ package com.onemount.service.infrastructure.adapter;
 
 import com.onemount.service.business.domain.project.Project;
 import com.onemount.service.business.domain.repo.ProjectRepo;
+import com.onemount.service.infrastructure.datasources.sql.ProjectSql;
 import com.onemount.service.infrastructure.datasources.sql.mapper.ProjectSqlMapper;
 import com.onemount.service.infrastructure.datasources.sql.repo.ProjectSqlRepo;
 import lombok.AllArgsConstructor;
@@ -11,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
+import java.util.Optional;
 
 @Slf4j
 @Component
@@ -29,7 +31,9 @@ public class ProjectRepoImpl implements ProjectRepo {
 
     @Override
     public Project getById(String id) {
-        return mapper.to(repo.findById(id).get());
+
+        Optional<ProjectSql> projectSql = repo.findById(id);
+        return mapper.to(projectSql.get());
     }
 
     @Override

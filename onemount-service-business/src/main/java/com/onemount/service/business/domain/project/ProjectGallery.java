@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProjectGallery {
 
-    private String id;
+    private String galleryId;
     private String category;
-    private String urls;
+    private String url;
 }

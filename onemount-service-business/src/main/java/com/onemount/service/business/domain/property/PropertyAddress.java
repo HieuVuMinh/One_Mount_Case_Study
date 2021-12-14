@@ -13,6 +13,6 @@ public class PropertyAddress {
         private String wardName;
         private String districtName;
         private String cityName;
-        private Number latitude;
-        private Number longitude;
+        private Integer latitude;
+        private Integer longitude;
 }

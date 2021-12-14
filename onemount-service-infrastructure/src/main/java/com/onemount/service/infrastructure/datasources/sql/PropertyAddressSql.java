@@ -4,28 +4,35 @@ import com.onemount.service.infrastructure.config.BaseModel;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.math.BigDecimal;
 
 @Data
 @Entity
-@Table(name = "PROPERTY_ADDRESSES")
-public class PropertyAddressesSql extends BaseModel {
-    private long id;
+@Table(name = "PROPERTY_ADDRESS")
+public class PropertyAddressSql extends BaseModel {
+    private String addressId;
     private String addressNumber;
     private String wardName;
     private String districtName;
     private String cityName;
-    private BigDecimal latitude;
-    private BigDecimal longitude;
+    private Integer latitude;
+    private Integer longitude;
+    private PropertiesSql propertiesSql;
 
-    @Id
-    @Column(name = "id", nullable = false)
-    public long getId() {
-        return id;
+    @OneToOne(mappedBy = "propertyAddress")
+    public PropertiesSql getPropertiesSql() {
+        return propertiesSql;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    @Id
+    @Column(name = "address_id", nullable = false)
+    public String getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(String addressId) {
+        this.addressId = addressId;
     }
 
     @Basic
@@ -69,22 +76,22 @@ public class PropertyAddressesSql extends BaseModel {
     }
 
     @Basic
-    @Column(name = "latitude", nullable = true, precision = 2)
-    public BigDecimal getLatitude() {
+    @Column(name = "latitude", nullable = true)
+    public Integer getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(BigDecimal latitude) {
+    public void setLatitude(Integer latitude) {
         this.latitude = latitude;
     }
 
     @Basic
-    @Column(name = "longtitude", nullable = true, precision = 2)
-    public BigDecimal getLongitude() {
+    @Column(name = "longitude", nullable = true)
+    public Integer getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(BigDecimal longitude) {
+    public void setLongitude(Integer longitude) {
         this.longitude = longitude;
     }
 

@@ -10,14 +10,15 @@ import javax.persistence.*;
 @Table(name = "PROJECT_GALLERY")
 public class ProjectGallerySql extends BaseModel {
 
-    private String id;
+
+    private String galleryId;
     private String category;
     private String url;
 
     private ProjectSql project;
 
     @ManyToOne
-    @JoinColumn(name = "project_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "project_id", referencedColumnName = "project_id", nullable = false)
     public ProjectSql getProject() {
         return project;
     }
@@ -27,13 +28,13 @@ public class ProjectGallerySql extends BaseModel {
     }
 
     @Id
-    @Column(name = "id", nullable = false)
-    public String getId() {
-        return id;
+    @Column(name = "gallery_id", nullable = false)
+    public String getGalleryId() {
+        return galleryId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setGalleryId(String galleryId) {
+        this.galleryId = galleryId;
     }
 
     @Basic

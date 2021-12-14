@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "PROPERTY_GALLERIES")
 public class PropertyGalleriesSql extends BaseModel {
 
-    private long id;
+    private String id;
     private String mediaType;
     private String category;
     private String urls;
@@ -18,18 +18,18 @@ public class PropertyGalleriesSql extends BaseModel {
     private PropertiesSql property;
 
     @ManyToOne
-    @JoinColumn(name = "property_id", referencedColumnName = "id")
+    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
     public PropertiesSql getProperty() {
         return property;
     }
 
     @Id
-    @Column(name = "id", nullable = false)
-    public long getId() {
+    @Column(name = "gallery_id", nullable = false)
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

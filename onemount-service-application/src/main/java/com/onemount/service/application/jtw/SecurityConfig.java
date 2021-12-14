@@ -94,8 +94,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.authorizeRequests()
-                .antMatchers("/login").permitAll()
-                .anyRequest().authenticated();
+                .antMatchers("/**").permitAll();
+//                .anyRequest().authenticated();
 //        http.authorizeRequests()
 //                .antMatchers("/","/wall/**").permitAll()
 //                .antMatchers("/users/{userId}/**").access("hasRole('ADMIN') or @userSecurity.hasUserId(authentication,#userId)");
