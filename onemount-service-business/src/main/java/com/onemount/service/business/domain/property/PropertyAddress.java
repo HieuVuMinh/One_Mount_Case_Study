@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PropertyAddress {
 
-        private String id;
+        private String addressId;
+        private String addressNumber;
         private String wardName;
         private String districtName;
         private String cityName;

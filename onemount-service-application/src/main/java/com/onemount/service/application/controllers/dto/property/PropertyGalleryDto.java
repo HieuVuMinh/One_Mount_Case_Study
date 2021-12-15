@@ -1,13 +1,13 @@
-package com.onemount.service.business.domain.property;
+package com.onemount.service.application.controllers.dto.property;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class PropertyGallery {
+@AllArgsConstructor
+public class PropertyGalleryDto {
 
     private String id;
     private String mediaType;

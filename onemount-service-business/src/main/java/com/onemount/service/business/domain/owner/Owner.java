@@ -1,4 +1,4 @@
-package com.onemount.service.business.domain;
+package com.onemount.service.business.domain.owner;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

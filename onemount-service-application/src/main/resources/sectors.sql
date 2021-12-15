@@ -11,7 +11,6 @@ insert into sectors (sector_id, sector_name, sector_code, number_property, secto
 ('1c0b3243-7f2b-4753-b223-44d2d87666e0','San Pedro','PHP',582,'HR Consulting','0c59f5e5-e81f-4d6b-82d2-dc3365b52afa'),
 ('ed0fcd02-f92a-493c-a2ee-3b6894b62fa3','Yongheshi','CNY',687,'BCNE','74344837-1852-4817-a348-f04e094b3dc7'),
 ('a8ae2fe8-34a7-406b-a2aa-808dfc7dc132','Arinos','BRL',562,'ODC','2a0ef8eb-d57f-4504-885f-9178570ce00f'),
-('07371be5-f8a4-4f99-8b46-387592b1491a','Ban Huai Thalaeng','THB',148,'UCaaS','90ec145a-f92e-4cc3-b589-3d7b908f7e44'),
 ('1adac2fe-ea97-4905-a1bd-538fde7787b2','Čačak','RSD',594,'SEM','74344837-1852-4817-a348-f04e094b3dc7'),
 ('8faba88b-9bff-40d9-b3eb-ac5d18802e98','Guamo','COP',727,'Laboratory','0f1da5ef-ae47-41a7-9411-b0f009ee4dbf'),
 ('e1039d9d-bcdd-4631-97e2-5cfa107eb92e','Thị Trấn Vạn Hà','VND',350,'Military Logistics','2a0ef8eb-d57f-4504-885f-9178570ce00f'),

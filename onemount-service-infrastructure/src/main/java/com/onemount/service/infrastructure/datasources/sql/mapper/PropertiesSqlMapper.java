@@ -5,7 +5,11 @@ import com.onemount.service.common.shared.mapper.IObjectMapper;
 import com.onemount.service.infrastructure.datasources.sql.PropertiesSql;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {
+        PropertyAddressSqlMapper.class,
+        PropertyGallerySqlMapper.class,
+        SectorSqlMapper.class
+})
 public interface PropertiesSqlMapper extends IObjectMapper<Properties, PropertiesSql> {
 
 }

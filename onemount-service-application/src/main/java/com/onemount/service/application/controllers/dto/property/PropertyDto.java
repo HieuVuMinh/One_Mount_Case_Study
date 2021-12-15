@@ -1,16 +1,17 @@
-package com.onemount.service.business.domain.property;
+package com.onemount.service.application.controllers.dto.property;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Properties {
+public class PropertyDto {
 
     private String propertyId;
     private String projectName;
@@ -28,14 +29,10 @@ public class Properties {
     private String ownerId;
     private Double totalPrice;
 
-    private Sector sector;
+    private SectorDto sector;
 
-    private PropertyAddress propertyAddress;
+    private PropertyAddressDto propertyAddress;
 
-    private List<PropertyGallery> propertyGalleries;
+    private List<PropertyGalleryDto> propertyGalleries;
 
-    @Override
-    public Properties clone() {
-        return null;
-    }
 }

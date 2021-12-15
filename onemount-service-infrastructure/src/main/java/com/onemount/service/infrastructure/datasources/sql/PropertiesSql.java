@@ -26,6 +26,7 @@ public class PropertiesSql extends BaseModel {
     private BigDecimal numberBalcony;
     private String doorDirection;
     private String ownerId;
+    private Double totalPrice;
 
     private SectorsSql sector;
 
@@ -193,5 +194,15 @@ public class PropertiesSql extends BaseModel {
 
     public void setDoorDirection(String doorDirection) {
         this.doorDirection = doorDirection;
+    }
+
+    @Basic
+    @Column(name = "total_price", nullable = true, length = 200)
+    public Double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }
