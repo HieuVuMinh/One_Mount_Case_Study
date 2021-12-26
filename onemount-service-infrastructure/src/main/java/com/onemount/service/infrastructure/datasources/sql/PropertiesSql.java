@@ -27,6 +27,8 @@ public class PropertiesSql extends BaseModel {
     private String doorDirection;
     private String ownerId;
     private Double totalPrice;
+    private Integer totalArea;
+    private String imageUrl;
 
     private SectorsSql sector;
 
@@ -204,5 +206,25 @@ public class PropertiesSql extends BaseModel {
 
     public void setTotalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    @Basic
+    @Column(name = "total_area", nullable = true, length = 200)
+    public Integer getTotalArea() {
+        return totalArea;
+    }
+
+    public void setTotalArea(Integer totalArea) {
+        this.totalArea = totalArea;
+    }
+
+    @Basic
+    @Column(name = "image_url", nullable = true, length = 200)
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

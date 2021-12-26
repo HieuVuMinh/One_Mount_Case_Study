@@ -28,6 +28,8 @@ public class PropertyDto {
     private String doorDirection;
     private String ownerId;
     private Double totalPrice;
+    private Integer totalArea;
+    private String imageUrl;
 
     private SectorDto sector;
 

@@ -93,13 +93,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
+        http.cors();
         http.authorizeRequests()
                 .antMatchers("/**").permitAll();
 //                .anyRequest().authenticated();
 //        http.authorizeRequests()
 //                .antMatchers("/","/wall/**").permitAll()
 //                .antMatchers("/users/{userId}/**").access("hasRole('ADMIN') or @userSecurity.hasUserId(authentication,#userId)");
-        http.cors();
     }
 
 //    public boolean hasUserId(Authentication authentication, Long userId) {

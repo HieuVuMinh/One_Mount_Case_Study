@@ -11,7 +11,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
-import java.util.Optional;
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 @Slf4j
 @Component
@@ -23,8 +25,8 @@ public class PropertyRepoImpl implements PropertyRepo {
     private final PropertiesSqlMapper mapper;
 
     @Override
-    public Page<Properties> getAll(Pageable pageable) {
-        return repo.findAll(pageable).map(mapper::to);
+    public List<Properties> getAll() {
+        return repo.findAll().stream().map(mapper::to).collect(Collectors.toList());
     }
 
     @Override
