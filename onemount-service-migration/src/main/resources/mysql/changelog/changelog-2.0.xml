@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="hieu.vu4" id="add_owners">
+        <sqlFile dbms="mysql"
+                 path="classpath:/mysql/sources/owners.sql"
+                 relativeToChangelogFile="false"/>
+    </changeSet>
+    <changeSet author="hieu.vu4" id="add_project_address">
+        <sqlFile dbms="mysql"
+                 path="classpath:/mysql/sources/project_address.sql"
+                 relativeToChangelogFile="false"/>
+    </changeSet>
+    <changeSet author="hieu.vu4" id="add_project_gallery">
+        <sqlFile dbms="mysql"
+                 path="classpath:/mysql/sources/project_gallery.sql"
+                 relativeToChangelogFile="false"/>
+    </changeSet>
+    <changeSet author="hieu.vu4" id="add_project">
+        <sqlFile dbms="mysql"
+                 path="classpath:/mysql/sources/projects.sql"
+                 relativeToChangelogFile="false"/>
+    </changeSet>
+    <changeSet author="hieu.vu4" id="add_property_address">
+        <sqlFile dbms="mysql"
+                 path="classpath:/mysql/sources/property_address.sql"
+                 relativeToChangelogFile="false"/>
+    </changeSet>
+    <changeSet author="hieu.vu4" id="add_properties">
+        <sqlFile dbms="mysql"
+                 path="classpath:/mysql/sources/properties.sql"
+                 relativeToChangelogFile="false"/>
+    </changeSet>
+    <changeSet author="hieu.vu4" id="add_property_galleries">
+        <sqlFile dbms="mysql"
+                 path="classpath:/mysql/sources/property_galleries.sql"
+                 relativeToChangelogFile="false"/>
+    </changeSet>
+    <changeSet author="hieu.vu4" id="add_sectors.sql">
+        <sqlFile dbms="mysql"
+                 path="classpath:/mysql/sources/sectors.sql"
+                 relativeToChangelogFile="false"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: "local"
+  application.name: onemount-service-migration
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+  liquibase:
+    change-log: classpath:/mysql/liquibase-changelog.xml
+liquibase.database: mysql

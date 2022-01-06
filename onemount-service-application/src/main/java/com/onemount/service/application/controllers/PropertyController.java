@@ -24,14 +24,6 @@ public class PropertyController {
 
     private final PropertyDtoMapper mapper;
 
-//    @GetMapping
-//    public BaseResponse<Page<PropertyDto>> getAll(Pageable pageable) {
-//
-//        var resp = useCase.getAll(pageable);
-//
-//        return BaseResponse.ofSucceeded(resp.map(mapper::to));
-//    }
-
     @GetMapping
     public Iterable<PropertyDto> getAll() {
         return useCase.getAll().stream().map(mapper::to).collect(Collectors.toList());
