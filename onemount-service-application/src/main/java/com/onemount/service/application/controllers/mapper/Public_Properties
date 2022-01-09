@@ -1,0 +1,145 @@
+Background:
+    Given the data properties from HD has the following information
+      | Field                           | Format      | Sample                                   |
+      # PROPERTIES
+      | uuid                            | varchar     | s0127cd6-3a38-5455-8583-b107db5bd340     |
+      | project_id                      | varchar     | 60b99500-449d-5941-ae39-22a301455509     |
+      | sector_id                       | varchar     | 02119414-aae8-41d1-8583-b107db5bd340     |
+      | address_id                      | varchar     | 02119414-aae8-41d1-8583-b107db5bd340     |
+      | floor_id                        | varchar     | c0127cd6-3a38-5455-8314-14f7a17777c0     |
+      | balcony_view                    | varchar     | {apt_1st_balcony_view":"Công viên}       |
+      | property_type                   | varchar     | Chung cư                                 |
+      | property_number                 | varchar     | 13                                       |
+      | number_of_bedrooms              | decimal     | 1                                        |
+      | number_of_bathrooms             | decimal     | 1                                        |
+      | position                        | varchar     | Căn giữa                                 |
+      | property_description            | varchar     | null                                     |
+      | view                            | varchar     | null                                     |
+      | architect_type                  | varchar     | null                                     |
+      | apartment_status                | varchar     | null                                     |
+      | business_type                   | varchar     | null                                     |
+      | number_balcony_living           | int         | null                                     |
+      | number_balcony_bedroom          | int         | null                                     |
+      | number_balcony                  | decimal     | null                                     |
+      | balcony_direction               | varchar     | {"apt_1st_balcony_direction":"Tây Bắc"}  |
+      | property_category               | varchar     | null                                     |
+      | developer_handover_status       | varchar     | null                                     |
+      | door_direction                  | varchar     | Đông Nam                                 |
+      | rank                            | varchar     | Trung cấp                                |
+      | announce_date                   | varchar     | 1419206400000                            |
+      | central_park_dist               | decimal     | null                                     |
+      | adv_crt                         | varchar     | null                                     |
+      | disadv_crt                      | varchar     | null                                     |
+      | house_type                      | varchar     | null                                     |
+      | construction_year               | varchar     | null                                     |
+      | residual_val                    | decimal     | null                                     |
+      | has_smp                         | varchar     | null                                     |
+      | value_source                    | varchar     | null                                     |
+      | layout                          | varchar     | null                                     |
+      # HIGH_RISE_PROPERTIES
+      | floor_number                    | varchar     | 26                                       |
+      | property_axis                   | varchar     | null                                     |
+      | total_balcony_logia             | varchar     | null                                     |
+      | number_windowless_bedroom       | decimal     | 0.50                                     |
+      | heart_wall_area                 | decimal     | 31.20                                    |
+      | carpet_area                     | decimal     | 27.80                                    |
+      # LOW_RISE_PROPERTIES
+      | width                           | decimal     | null                                     |
+      | depth                           | decimal     | null                                     |
+      | street_name                     | varchar     | Minh Khai                                |
+      | carriage_way_width              | decimal     | null                                     |
+      | total_area                      | decimal     | 50.0                                     |
+      | garden_area                     | decimal     | 10.0                                     |
+      | built_up_area                   | decimal     | null                                     |
+      | basement_area                   | decimal     | 25.5                                     |
+      | ground_floor_area               | decimal     | 30.5                                     |
+      | ownership_type                  | varchar     | null                                     |
+      | number_of_floors                | int         | 1                                        |
+      | number_of_facades               | int         | 2                                        |
+      | sub_road_lv1                    | varchar     | null                                     |
+      | sub_road_lv2                    | varchar     | null                                     |
+      | sub_road_id1                    | varchar     | null                                     |
+      | sub_road_id2                    | varchar     | null                                     |
+      | route_name                      | varchar     | null                                     |
+      | segment_name                    | varchar     | null                                     |
+      | location_rank                   | varchar     | null                                     |
+      | contiguous_road_with            | decimal     | 30.5                                     |
+      | roadbed_width                   | decimal     | 30.5                                     |
+      | sidewalk_width                  | decimal     | 30.5                                     |
+      | pavement_type                   | varchar     | null                                     |
+      | main_road_dist                  | decimal     | 30.5                                     |
+      | waist_width_to_main_road        | decimal     | 30.5                                     |
+      | is_impasse_road                 | varchar     | null                                     |
+      | facade_direction1               | varchar     | null                                     |
+      | facade_direction2               | varchar     | null                                     |
+      | facade_direction3               | varchar     | null                                     |
+      | facade_width1                   | decimal     | 30.5                                     |
+      | facade_width2                   | decimal     | 30.5                                     |
+      | facade_width3                   | decimal     | 30.5                                     |
+      | view1                           | varchar     | null                                     |
+      | view2                           | varchar     | null                                     |
+      | view3                           | varchar     | null                                     |
+      | shape                           | varchar     | null                                     |
+      | construction_height             | decimal     | 30.5                                     |
+      | gross_floor_area                | decimal     | 30.5                                     |
+      | number_of_basements             | int         | 30.5                                     |
+      | has_elevator                    | varchar     | null                                     |
+      | has_garden                      | varchar     | null                                     |
+      | roof_struct_type                | varchar     | null                                     |
+      | frame                           | varchar     | null                                     |
+      | wall_material                   | varchar     | null                                     |
+      | land_using_purpose              | varchar     | null                                     |
+      | land_using_term                 | varchar     | null                                     |
+      | land_using_plan                 | varchar     | null                                     |
+      | red_boundary_line_plan          | varchar     | null                                     |
+      | construction_boundary_line_plan | varchar     | null                                     |
+      # PROPERTY_BUYING_HISTORIES
+      | transaction_date                | varchar     | null                                     |
+      | transaction_amount_include_vat  | int         | null                                     |
+      | transaction_amount              | int         | null                                     |
+      | vat                             | decimal     | null                                     |
+      | loan_status                     | varchar     | null                                     |
+      | agent                           | varchar     | null                                     |
+      | first_trans_date                | varchar     | null                                     |
+      | first_trans_amount              | int         | null                                     |
+      | bank_guarrantee_discount        | decimal     | null                                     |
+      | one_time_payment_discount       | decimal     | null                                     |
+      | other_discount                  | decimal     | null                                     |
+      | bank_loan                       | decimal     | null                                     |
+      | last_trans_amount               | int         | null                                     |
+      | last_trans_date                 | varchar     | null                                     |
+      | first_transfer_date             | varchar     | null                                     |
+      | inter_trans                     | varchar     | null                                     |
+      | announcement_date               | varchar     | null                                     |
+      # PROPERTY_FACILITIES
+      | name                            | varchar     | null                                     |
+      # PROPERTY_FURNITURES
+      | names                           | varchar     | Bàn Ghế sofa                             |
+      | furniture_price                 | decimal     | 7400000                                  |
+      | furniture_status                | varchar     | Mới                                      |
+      # PROPERTY_GALLERIES
+      | media_type                      | varchar     | null                                     |
+      | category                        | varchar     | null                                     |
+      | urls                            | varchar     | null                                     |
+      # PROPERTY_HANDOVER_INFOS
+      | hand_over_date                  | varchar     | null                                     |
+      | first_handover_status           | varchar     | null                                     |
+      | current_handover_status         | varchar     | null                                     |
+      # PROPERTY_LEGAL_INFOS
+      | legal_type                      | varchar     | null                                     |
+      | status                          | varchar     | null                                     |
+      | has_own_cert                    | varchar     | null                                     |
+      | own_cert_id                     | varchar     | null                                     |
+      | cert_bank_mortgage              | varchar     | null                                     |
+      | has_dispute                     | varchar     | null                                     |
+      # PROPERTY_MAINTAIN_HISTORIES
+      | maintain_date                   | varchar     | null                                     |
+      | maintain_value                  | int         | null                                     |
+      | notes                           | varchar     | null                                     |
+      # PROPERTY_USAGE_INFOS
+      | usage_status                    | varchar     | null                                     |
+      | usage_date                      | date        | null                                     |
+      | number_people_living            | int         | null                                     |
+      | rent_status                     | varchar     | null                                     |
+      | sold_price                      | varchar     | null                                     |
+      | contact_info                    | varchar     | null                                     |
