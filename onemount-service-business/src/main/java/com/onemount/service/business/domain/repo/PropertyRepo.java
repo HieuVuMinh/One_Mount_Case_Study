@@ -10,4 +10,5 @@ public interface PropertyRepo {
 
     Properties getById(String id);
 
+    List<Properties> getByProjectNameAndTotalPrice(String projectName, Double price);
 }

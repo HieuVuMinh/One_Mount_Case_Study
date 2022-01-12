@@ -23,4 +23,9 @@ public class PropertyUseCaseImpl implements PropertyUseCase {
     public Properties getById(String id) {
         return repo.getById(id);
     }
+
+    @Override
+    public List<Properties> getByProjectNameAndTotalPrice(String projectName, Double price) {
+        return repo.getByProjectNameAndTotalPrice(projectName, price);
+    }
 }

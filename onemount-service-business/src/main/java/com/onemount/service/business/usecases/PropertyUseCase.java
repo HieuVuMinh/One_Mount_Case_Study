@@ -11,4 +11,6 @@ public interface PropertyUseCase {
 
     Properties getById(String id);
 
+    List<Properties> getByProjectNameAndTotalPrice(String projectName, Double price);
+
 }

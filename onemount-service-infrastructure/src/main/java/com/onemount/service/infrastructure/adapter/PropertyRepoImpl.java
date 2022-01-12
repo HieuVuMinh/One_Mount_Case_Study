@@ -30,4 +30,9 @@ public class PropertyRepoImpl implements PropertyRepo {
         return mapper.to(repo.findById(id).get());
     }
 
+    @Override
+    public List<Properties> getByProjectNameAndTotalPrice(String projectName, Double price) {
+        return repo.findByProjectNameAndTotalPrice(projectName, price).stream().map(mapper::to).collect(Collectors.toList());
+    }
+
 }

@@ -33,5 +33,10 @@ public class PropertyController {
     public BaseResponse<PropertyDto> getAllProject(@PathVariable("id") String id) {
         return BaseResponse.ofSucceeded(mapper.to(useCase.getById(id)));
     }
+
+    @GetMapping("/project_name_{name}/{price}")
+    public Iterable<PropertyDto> getByProjectNameAndTotalPrice(@PathVariable("name") String projectName, @PathVariable("price") Double price){
+        return useCase.getByProjectNameAndTotalPrice(projectName, price).stream().map(mapper::to).collect(Collectors.toList());
+    }
 }
 
