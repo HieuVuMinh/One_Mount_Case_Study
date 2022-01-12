@@ -1,4 +1,4 @@
-insert into owners (owner_id, name, email, phone_number, address) values
+insert into owners_sql (id, name, email, phone_number, address) values
 ('4a0c63ba-bb17-4fbb-9fad-7087aac365cc','Jarrad','jcochrane0@flavors.me','+33 199 101 1376','36381 6th Avenue'),
 ('8005a9cc-9c91-41ab-ad46-8efd295c268f','Waldo','wcleeve1@timesonline.co.uk','+994 565 253 5202','732 Westerfield Way'),
 ('6638f5eb-dbda-4b5a-9b0c-9dc30dd9b462','Patric','phawse2@jigsy.com','+55 335 612 8824','207 Dakota Place'),

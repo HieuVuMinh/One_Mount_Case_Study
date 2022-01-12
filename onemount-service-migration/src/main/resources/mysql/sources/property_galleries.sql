@@ -1,4 +1,4 @@
-insert into property_galleries (gallery_id, media_type, category, urls, property_id)
+insert into property_galleries_sql (id, media_type, category, urls, property_property_id)
 values ('52e426d5-1e30-4718-8241-f740e35f0fa8', 'video/x-msvideo', 'Soft Flooring and Base',
         'http://dummyimage.com/161x100.png/dddddd/000000', '8014bdcc-57c2-40cc-a624-85efffe10a23'),
        ('f1bbd9aa-a282-409e-bad9-16a63fa8224a', 'image/pjpeg', 'Casework',

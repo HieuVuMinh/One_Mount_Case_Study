@@ -2,18 +2,14 @@ package com.onemount.service.infrastructure.adapter;
 
 import com.onemount.service.business.domain.property.Properties;
 import com.onemount.service.business.domain.repo.PropertyRepo;
-import com.onemount.service.infrastructure.datasources.sql.PropertiesSql;
 import com.onemount.service.infrastructure.datasources.sql.mapper.PropertiesSqlMapper;
 import com.onemount.service.infrastructure.datasources.sql.repo.PropertiesSqlRepo;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 
 @Slf4j
 @Component

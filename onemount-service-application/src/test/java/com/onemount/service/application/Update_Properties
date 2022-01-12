@@ -15,7 +15,7 @@ Background:
       | position                        | varchar |         | x      |        | Căn giữa                                 |
       | property_description            | varchar |         | x      |        | null                                     |
       | view                            | varchar |         | x      |        | null                                     |
-      | architect_type                  | varchar |         | x      |        | null                                     |
+      | architect_type                  | varchar |         | x      |        | Landscape architecture                   |
       | apartment_status                | varchar |         | x      |        | null                                     |
       | business_type                   | varchar |         | x      |        | null                                     |
       | number_balcony_living           | int     |         | x      |        | null                                     |
@@ -63,12 +63,12 @@ Background:
       | route_name                      | varchar |         | x      |        | null                                     |
       | segment_name                    | varchar |         | x      |        | null                                     |
       | location_rank                   | varchar |         | x      |        | null                                     |
-      | contiguous_road_with            | decimal |         | x      |        | 30.5                                     |
-      | roadbed_width                   | decimal |         | x      |        | 30.5                                     |
-      | sidewalk_width                  | decimal |         | x      |        | 30.5                                     |
-      | pavement_type                   | varchar |         | x      |        | null                                     |
+      | contiguous_road_with            | decimal |         | x      |        | 5.3                                      |
+      | roadbed_width                   | decimal |         | x      |        | 4.0                                      |
+      | sidewalk_width                  | decimal |         | x      |        | 1.3                                      |
+      | pavement_type                   | varchar |         | x      |        | Nhựa đường đặc nóng                      |
       | main_road_dist                  | decimal |         | x      |        | 30.5                                     |
-      | waist_width_to_main_road        | decimal |         | x      |        | 30.5                                     |
+      | waist_width_to_main_road        | decimal |         | x      |        | 3.0                                      |
       | is_impasse_road                 | varchar |         | x      |        | null                                     |
       | facade_direction1               | varchar |         | x      |        | null                                     |
       | facade_direction2               | varchar |         | x      |        | null                                     |
@@ -81,11 +81,11 @@ Background:
       | view3                           | varchar |         | x      |        | null                                     |
       | shape                           | varchar |         | x      |        | null                                     |
       | construction_height             | decimal |         | x      |        | 30.5                                     |
-      | gross_floor_area                | decimal |         | x      |        | 30.5                                     |
-      | number_of_basements             | int     |         | x      |        | 30.5                                     |
-      | has_elevator                    | varchar |         | x      |        | null                                     |
-      | has_garden                      | varchar |         | x      |        | null                                     |
-      | roof_struct_type                | varchar |         | x      |        | null                                     |
+      | gross_floor_area                | decimal |         | x      |        | 80.0                                     |
+      | number_of_basements             | int     |         | x      |        | 1                                        |
+      | has_elevator                    | varchar |         | x      |        | No                                       |
+      | has_garden                      | varchar |         | x      |        | No                                       |
+      | roof_struct_type                | varchar |         | x      |        | Mái dốc                                  |
       | frame                           | varchar |         | x      |        | null                                     |
       | wall_material                   | varchar |         | x      |        | null                                     |
       | land_using_purpose              | varchar |         | x      |        | null                                     |
@@ -98,7 +98,7 @@ Background:
       | transaction_amount_include_vat  | int     |         | x      |        | null                                     |
       | transaction_amount              | int     |         | x      |        | null                                     |
       | vat                             | decimal |         | x      |        | null                                     |
-      | loan_status                     | varchar |         | x      |        | null                                     |
+      | loan_status                     | varchar |         | x      |        | 20                                       |
       | agent                           | varchar |         | x      |        | null                                     |
       | first_trans_date                | varchar |         | x      |        | null                                     |
       | first_trans_amount              | int     |         | x      |        | null                                     |
@@ -118,20 +118,20 @@ Background:
       | furniture_price                 | decimal |         | x      |        | 7400000                                  |
       | furniture_status                | varchar |         | x      |        | Mới                                      |
       # PROPERTY_GALLERIES
-      | media_type                      | varchar |         | x      |        | null                                     |
+      | media_type                      | varchar |         | x      |        | images                                   |
       | category                        | varchar |         | x      |        | null                                     |
-      | urls                            | varchar |         | x      |        | null                                     |
+      | urls                            | varchar |         | x      |        | http://dummyimage.com/135x100.png/dd/00                                     |
       # PROPERTY_HANDOVER_INFOS
       | hand_over_date                  | varchar |         | x      |        | null                                     |
       | first_handover_status           | varchar |         | x      |        | null                                     |
       | current_handover_status         | varchar |         | x      |        | null                                     |
       # PROPERTY_LEGAL_INFOS
-      | legal_type                      | varchar |         | x      |        | null                                     |
+      | legal_type                      | varchar |         | x      |        | Yes                                      |
       | status                          | varchar |         | x      |        | null                                     |
-      | has_own_cert                    | varchar |         | x      |        | null                                     |
-      | own_cert_id                     | varchar |         | x      |        | null                                     |
-      | cert_bank_mortgage              | varchar |         | x      |        | null                                     |
-      | has_dispute                     | varchar |         | x      |        | null                                     |
+      | has_own_cert                    | varchar |         | x      |        | Yes                                      |
+      | own_cert_id                     | varchar |         | x      |        | 123456                                   |
+      | cert_bank_mortgage              | varchar |         | x      |        | No                                       |
+      | has_dispute                     | varchar |         | x      |        | No                                       |
       # PROPERTY_MAINTAIN_HISTORIES
       | maintain_date                   | varchar |         | x      |        | null                                     |
       | maintain_value                  | int     |         | x      |        | null                                     |
@@ -139,7 +139,7 @@ Background:
       # PROPERTY_USAGE_INFOS
       | usage_status                    | varchar |         | x      |        | null                                     |
       | usage_date                      | date    |         | x      |        | null                                     |
-      | number_people_living            | int     |         | x      |        | null                                     |
-      | rent_status                     | varchar |         | x      |        | null                                     |
+      | number_people_living            | int     |         | x      |        | 3                                        |
+      | rent_status                     | varchar |         | x      |        | sell                                     |
       | sold_price                      | varchar |         | x      |        | null                                     |
       | contact_info                    | varchar |         | x      |        | null                                     |

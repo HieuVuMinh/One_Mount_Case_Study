@@ -1,4 +1,4 @@
-insert into property_address (address_id, address_number, ward_name, district_name, city_name, latitude, longitude)
+insert into property_address_sql (address_id, address_number, ward_name, district_name, city_name, latitude, longitude)
 values ('738fa95f-b188-4b51-a45f-c57ac0422fe4', 0, 'California', 'Badeau', 'Richmond', 37.7772, -121.9554),
        ('441964ad-c718-4902-aa04-67e70dc9fa99', 063, 'Connecticut', 'Miller', 'New Haven', 41.3057, -72.7799),
        ('1a98609e-5169-4716-b6db-bd0edbc42526', 0880, 'California', 'Kingsford', 'Oxnard', 34.0324, -119.1343),

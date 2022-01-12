@@ -1,4 +1,4 @@
-insert into sectors (sector_id, sector_name, sector_code, number_property, sector_galleries, project_id) values
+insert into sectors_sql (id, sector_name, sector_code, number_property, sector_galleries, project_project_id) values
 ('f7de09e3-5adc-45a3-9ed9-e7873422cea7','Poissy','EUR',405,'Non-fiction','90ec145a-f92e-4cc3-b589-3d7b908f7e44'),
 ('98f4ca65-67f6-4cff-9ecb-9e180d9b9b26','San Kamphaeng','THB',232,'CAD','0f1da5ef-ae47-41a7-9411-b0f009ee4dbf'),
 ('8e3dbba0-30dd-4b43-bf8f-b009680f5b69','Kloangrotat','IDR',707,'OTM','2a0ef8eb-d57f-4504-885f-9178570ce00f'),

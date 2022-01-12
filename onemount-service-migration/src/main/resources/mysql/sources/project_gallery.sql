@@ -1,4 +1,4 @@
-insert into project_gallery (gallery_id, category, url, project_id) values
+insert into project_gallery_sql (gallery_id, category, url, project_project_id) values
 ('02803c59-1795-4e1f-b1ce-6971a478f459','Granite Surfaces','http://dummyimage.com/246x100.png/dddddd/000000','90ec145a-f92e-4cc3-b589-3d7b908f7e44'),
 ('3ad84e25-fe0f-476e-833c-a7777d76fda0','Overhead Doors','http://dummyimage.com/242x100.png/dddddd/000000','0f1da5ef-ae47-41a7-9411-b0f009ee4dbf'),
 ('6bca9fda-4ec5-482b-85ba-a687775310a2','Casework','http://dummyimage.com/243x100.png/cc0000/ffffff','2a0ef8eb-d57f-4504-885f-9178570ce00f'),
