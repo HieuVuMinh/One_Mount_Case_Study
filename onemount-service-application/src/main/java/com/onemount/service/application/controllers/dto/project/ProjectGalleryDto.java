@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ProjectGalleryDto {
 
+    private String id;
     private String galleryId;
     private String category;
     private String url;

@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 @AllArgsConstructor
 public class ProjectUseCaseImpl implements ProjectUseCase {
@@ -14,8 +16,8 @@ public class ProjectUseCaseImpl implements ProjectUseCase {
   private ProjectRepo repo;
 
   @Override
-  public Page<Project> getAll(Pageable pageable) {
-    return repo.getAll(pageable);
+  public List<Project> getAll() {
+    return repo.getAll();
   }
 
   @Override

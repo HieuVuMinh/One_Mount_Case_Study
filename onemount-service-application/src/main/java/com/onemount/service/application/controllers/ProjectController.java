@@ -6,9 +6,9 @@ import com.onemount.service.business.usecases.ProjectUseCase;
 import com.onemount.service.common.shared.infrastructure.rest.BaseResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.stream.Collectors;
 
 
 @Slf4j
@@ -22,11 +22,9 @@ public class ProjectController {
     private final ProjectDtoMapper mapper;
 
     @GetMapping
-    public BaseResponse<Page<ProjectDto>> getAll(Pageable pageable) {
+    public Iterable<ProjectDto> getAll() {
 
-        var resp = useCase.getAll(pageable);
-
-        return BaseResponse.ofSucceeded(resp.map(mapper::to));
+       return useCase.getAll().stream().map(mapper::to).collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")

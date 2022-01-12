@@ -12,7 +12,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Component
@@ -25,8 +27,8 @@ public class ProjectRepoImpl implements ProjectRepo {
     private final ProjectSqlMapper mapper;
 
     @Override
-    public Page<Project> getAll(Pageable pageable) {
-        return repo.findAll(pageable).map(mapper::to);
+    public List<Project> getAll() {
+        return repo.findAll().stream().map(mapper::to).collect(Collectors.toList());
     }
 
     @Override
